@@ -34,8 +34,10 @@ main{width:min(1160px,92vw);margin:auto}.section{padding:62px 0}.section-head{di
 .food img{aspect-ratio:1/1}.food .pad{padding:17px}.food h4{margin:0 0 5px}.food p{font-size:.85rem;color:var(--muted);margin:0}.taste{display:inline-block;margin-top:9px;font-size:.7rem;padding:4px 7px;border-radius:999px;background:#f3ead8;color:#7b5c25}
 .linklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.linkitem{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}.linkitem b{display:block}.linkitem span{font-size:.78rem;color:var(--muted)}
 details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:10px 0}summary{cursor:pointer;font-weight:800}
+
+.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.check-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.check-group h3{margin:0 0 5px;font-size:1.18rem}.check-group>p{margin:0 0 14px;color:var(--muted);font-size:.84rem}.check-item{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line);cursor:pointer}.check-item:last-child{border-bottom:0}.check-item input{appearance:none;width:22px;height:22px;border:2px solid #a9b3af;border-radius:7px;flex:0 0 22px;margin:2px 0 0;background:#fff;display:grid;place-items:center}.check-item input:checked{background:var(--jade);border-color:var(--jade)}.check-item input:checked:after{content:"✓";color:#fff;font-weight:900;font-size:.9rem}.check-item b{display:block;font-size:.92rem}.check-item small{display:block;color:var(--muted);font-size:.75rem;line-height:1.45;margin-top:2px}.pack-top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}.pack-meter{flex:1;height:10px;background:#e9e4d9;border-radius:999px;overflow:hidden}.pack-meter span{display:block;height:100%;width:0;background:var(--jade);transition:width .2s}.pack-count{font-weight:900;white-space:nowrap}.reset-btn{border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px 11px;font:inherit;font-size:.8rem;cursor:pointer}.beginner-tip{background:#edf5f2;border:1px solid #cfe2db;border-radius:18px;padding:17px 18px;margin-top:18px}.beginner-tip h3{margin:0 0 7px;font-size:1rem}.beginner-tip p{margin:5px 0;color:#455550;font-size:.85rem}
 footer{padding:40px 0 70px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);margin-top:30px}
-@media(max-width:820px){.c4,.c5,.c6,.c7,.c8{grid-column:span 12}.hotel{grid-template-columns:1fr}.hotel img{height:250px}.section{padding:45px 0}.timeline:before{left:64px}.event{grid-template-columns:50px 1fr;gap:28px}.event-body:before{left:-34px}.hotel-meta,.linklist{grid-template-columns:1fr}.hero{min-height:62vh}.hero-inner{padding-bottom:38px}}
+@media(max-width:820px){.check-grid{grid-template-columns:1fr}.pack-top{align-items:flex-start;flex-wrap:wrap}.c4,.c5,.c6,.c7,.c8{grid-column:span 12}.hotel{grid-template-columns:1fr}.hotel img{height:250px}.section{padding:45px 0}.timeline:before{left:64px}.event{grid-template-columns:50px 1fr;gap:28px}.event-body:before{left:-34px}.hotel-meta,.linklist{grid-template-columns:1fr}.hero{min-height:62vh}.hero-inner{padding-bottom:38px}}
 @media print{.sticky{display:none}.hero{min-height:38vh}.card,.event-body{box-shadow:none;break-inside:avoid}.section{padding:28px 0}a{text-decoration:none;color:inherit}.btn{border:1px solid #aaa;background:#fff;color:#000!important}}
 </style>
 </head>
@@ -48,7 +50,7 @@ footer{padding:40px 0 70px;color:var(--muted);font-size:.8rem;border-top:1px sol
     <div class="hero-meta"><span class="pill">2026.09.21 MON → 09.23 WED</span><span class="pill">2 NIGHTS / 3 DAYS</span><span class="pill">START: 神戸市・六甲道</span><span class="pill">2 TRAVELERS</span></div>
   </div>
 </header>
-<nav class="sticky"><div class="nav"><a href="#overview">OVERVIEW</a><a href="#day1">DAY 1</a><a href="#day2">DAY 2</a><a href="#day3">DAY 3</a><a href="#hotels">HOTELS</a><a href="#spots">PHOTO SPOTS</a><a href="#food">FOOD</a><a href="#links">LINKS</a></div></nav>
+<nav class="sticky"><div class="nav"><a href="#overview">OVERVIEW</a><a href="#day1">DAY 1</a><a href="#day2">DAY 2</a><a href="#day3">DAY 3</a><a href="#hotels">HOTELS</a><a href="#spots">PHOTO SPOTS</a><a href="#food">FOOD</a><a href="#packing">PACKING</a><a href="#links">LINKS</a></div></nav>
 <main>
 <section class="section" id="overview">
   <div class="section-head"><div><div class="eyebrow">TRIP AT A GLANCE</div><h2>旅の全体像</h2></div><div class="section-note">固定予約を芯にして、渋滞・入国審査・四草の船便など「ズレやすい所」は余白を持たせた設計。</div></div>
@@ -203,7 +205,81 @@ footer{padding:40px 0 70px;color:var(--muted);font-size:.8rem;border-top:1px sol
     <a class="linkitem" href="https://www.palaisdechinehotel.com/pdc-jp/pages/31/33/221" target="_blank"><b>Palais de Chine｜A1シャトル</b><span>11:00–16:00・予約制</span></a>
   </div>
   <details><summary>今回の“変動ポイント”</summary><p>① 9/21の入国審査・荷物受取 → Airport MRT、② 9/22朝の四草船（平日は約30人で出航）、③ 9/22 十分→九份の道路渋滞、④ 9/23 金品茶樓・冰讚の混雑、⑤ 復路KIXでの入国・受託手荷物。この5つは固定しすぎず、後ろに余白を残す。</p></details>
-  <details><summary>持ち物メモ</summary><p>パスポート、台湾eSIM、悠遊卡用の現金、折りたたみ傘、モバイルバッテリー、水着、薄手の羽織、歩きやすい靴。Palais de Chineは使い捨てアメニティを客室常備しない方針なので、歯ブラシ・カミソリ等は日本から持参推奨。</p></details>
+</section>
+
+
+<section class="section" id="packing">
+  <div class="section-head"><div><div class="eyebrow">PACKING CHECKLIST</div><h2>海外初心者でも安心。持ちものチェック</h2></div><div class="section-note">チェックはこの端末に保存されるので、前日に少しずつ埋めていけばOK。特にパスポート・TWAC・スマホまわりは先に確認。</div></div>
+  <div class="card pad" style="margin-bottom:18px">
+    <div class="pack-top"><div class="pack-count"><span id="packDone">0</span> / <span id="packTotal">0</span> CHECKED</div><div class="pack-meter"><span id="packBar"></span></div><button class="reset-btn" id="resetPacking" type="button">チェックをリセット</button></div>
+    <div style="color:var(--muted);font-size:.84rem">「なくても現地で買えるもの」と「忘れたら詰むもの」を分けてあるので、まずは上段から。</div>
+  </div>
+
+  <div class="check-grid">
+    <div class="check-group">
+      <h3>① 絶対忘れない</h3><p>ここだけは出発前夜に2人で確認。</p>
+      <label class="check-item"><input class="pack-check" data-key="passport" type="checkbox"><span><b>パスポート</b><small>預け荷物には入れず、空港から帰国まで手元に。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="phone" type="checkbox"><span><b>スマホ</b><small>搭乗券・地図・予約確認・連絡の全部を担う主役。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="cards" type="checkbox"><span><b>クレジットカード＋日本の財布</b><small>カードはできれば2枚系統を分けると安心。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="cash" type="checkbox"><span><b>台湾ドルの少額現金</b><small>夜市・天燈・小さなお店・交通の予備用。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="bookings" type="checkbox"><span><b>予約情報のスクショ</b><small>Peach、THSR、Klook、2ホテル。通信できない時用。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="twac" type="checkbox"><span><b>台湾 Arrival Card（TWAC）</b><small>台湾到着前7日以内にオンライン申請。無料の公式サイトを使う。</small></span></label>
+    </div>
+
+    <div class="check-group">
+      <h3>② スマホ・通信</h3><p>海外初心者はここを日本で済ませると一気にラク。</p>
+      <label class="check-item"><input class="pack-check" data-key="esim" type="checkbox"><span><b>台湾eSIMの購入・インストール</b><small>日本にいるうちに追加。現地で回線をONにするだけの状態へ。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="charger" type="checkbox"><span><b>充電器＋充電ケーブル</b><small>スマホ・イヤホン・Apple Watchなど必要分を確認。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="powerbank" type="checkbox"><span><b>モバイルバッテリー</b><small>Peachは160Wh以下・最大2個。機内持込で、機内使用・充電は不可。頭上収納にも入れない。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="earphones" type="checkbox"><span><b>イヤホン</b><small>往復フライトと移動時間用。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="maps" type="checkbox"><span><b>ホテル住所・地図を保存</b><small>中国語表記もスクショ。タクシーで見せるだけで通じやすい。</small></span></label>
+    </div>
+
+    <div class="check-group">
+      <h3>③ 服・身の回り</h3><p>9月の台湾は暑さ＋冷房＋雨の3点セット想定。</p>
+      <label class="check-item"><input class="pack-check" data-key="clothes" type="checkbox"><span><b>2泊分の着替え・下着・靴下</b><small>汗をかく前提で1枚余分があると安心。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="shoes" type="checkbox"><span><b>歩きやすい靴</b><small>九份は階段、台南・台北もかなり歩く。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="umbrella" type="checkbox"><span><b>折りたたみ傘</b><small>晴雨兼用だと日差し対策にも。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="outer" type="checkbox"><span><b>薄手の羽織</b><small>高鉄・店内・ホテルの冷房対策。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="sun" type="checkbox"><span><b>日焼け止め・帽子</b><small>四草や台北101周辺の屋外歩き用。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="amenities" type="checkbox"><span><b>歯ブラシ・カミソリ等</b><small>Palais de Chineは使い捨てアメニティを原則客室常備しない。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="medicine" type="checkbox"><span><b>普段の薬・酔い止め・胃薬</b><small>夜市や船があるので、必要な人は日本から。</small></span></label>
+    </div>
+
+    <div class="check-group">
+      <h3>④ 今回の旅専用</h3><p>今回のプランだから必要になるもの。</p>
+      <label class="check-item"><input class="pack-check" data-key="swimsuit" type="checkbox"><span><b>水着</b><small>1日目 Crowne Plaza Tainan の温水プール用。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="smallbag" type="checkbox"><span><b>小さめの街歩きバッグ</b><small>九份・夜市では大きい荷物を持たない。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="tissues" type="checkbox"><span><b>ティッシュ・ウェットティッシュ</b><small>夜市の食べ歩きでかなり活躍。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="zipbag" type="checkbox"><span><b>ジップ袋 / 小さいビニール袋</b><small>濡れ物・食べかけ・小物整理に万能。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="camera" type="checkbox"><span><b>カメラ用品</b><small>使うならSDカード・予備バッテリーまで。今回は映えスポット多め。</small></span></label>
+    </div>
+
+    <div class="check-group">
+      <h3>⑤ 出発前にやること</h3><p>荷物ではないけど、初心者ほど大事。</p>
+      <label class="check-item"><input class="pack-check" data-key="twacdone" type="checkbox"><span><b>TWACを2人とも申請</b><small>到着前7日以内。申請後の確認メールも残す。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="cardcheck" type="checkbox"><span><b>カードの海外利用を確認</b><small>利用通知をONにしておくと安心。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="share" type="checkbox"><span><b>このしおりを2人ともブックマーク</b><small>片方のスマホが使えなくても旅程を見られるように。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="weather" type="checkbox"><span><b>前日に天気・台風・運行確認</b><small>Peach、四草、九份の天候をチェック。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="insurance" type="checkbox"><span><b>海外旅行保険の補償確認</b><small>クレカ付帯なら適用条件も確認。</small></span></label>
+    </div>
+
+    <div class="check-group">
+      <h3>⑥ 現地で買えばOK</h3><p>忘れても焦らなくていいもの。</p>
+      <label class="check-item"><input class="pack-check" data-key="easycard" type="checkbox"><span><b>悠遊卡</b><small>桃園空港またはコンビニで購入。ちいかわ / ドラえもん柄があれば狙う。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="water" type="checkbox"><span><b>飲み物・お菓子</b><small>空港やコンビニで。日本から大量に持っていかなくてOK。</small></span></label>
+      <label class="check-item"><input class="pack-check" data-key="toiletries" type="checkbox"><span><b>足りない日用品</b><small>台湾はコンビニ・ドラッグストアが多いので現地調達しやすい。</small></span></label>
+    </div>
+  </div>
+
+  <div class="beginner-tip">
+    <h3>✈️ 海外初心者向け・ここだけ覚えておけばOK</h3>
+    <p><b>パスポートは絶対に預け荷物へ入れない。</b> 空港では「パスポート・スマホ・財布」の3つだけは何度でも確認。</p>
+    <p><b>台湾のコンセントは日本と同じAタイプが多い</b>ので、スマホ充電器なら基本的に変換プラグなしで使える。</p>
+    <p><b>TWACは無料。</b> 到着前7日以内に台湾移民署の公式サイトから申請する。料金を要求する代行サイトには注意。</p>
+    <p><b>モバイルバッテリーはPeachの機内ルールに注意。</b> 160Wh以下・最大2個、座席で目の届く範囲に置き、飛行中の使用・充電はしない。</p>
+    <div class="btns"><a class="btn alt" href="https://twac.immigration.gov.tw" target="_blank">TWAC公式</a><a class="btn alt" href="https://www.flypeach.com/lm/ai/airports/baggage/carry_on_bag" target="_blank">Peach 手荷物ルール</a></div>
+  </div>
 </section>
 
 <footer>
@@ -211,5 +287,30 @@ footer{padding:40px 0 70px;color:var(--muted);font-size:.8rem;border-top:1px sol
   作成時点：2026-09-18。予約情報は会話内の確定内容、営業時間・交通は各公式サイトの最新公開情報を参照。天候・運行・渋滞・現地営業は変わる可能性があるため、当日朝に再確認。掲載写真は各参照元のイメージ画像で、現地の天候・混雑とは異なる場合があります。
 </footer>
 </main>
+
+<script>
+(function(){
+  const boxes=[...document.querySelectorAll('.pack-check')];
+  const done=document.getElementById('packDone'), total=document.getElementById('packTotal'), bar=document.getElementById('packBar');
+  function update(){
+    const n=boxes.filter(b=>b.checked).length;
+    if(done) done.textContent=n;
+    if(total) total.textContent=boxes.length;
+    if(bar) bar.style.width=(boxes.length ? n/boxes.length*100 : 0)+'%';
+  }
+  boxes.forEach(b=>{
+    const key='taiwan2026_'+b.dataset.key;
+    b.checked=localStorage.getItem(key)==='1';
+    b.addEventListener('change',()=>{localStorage.setItem(key,b.checked?'1':'0');update();});
+  });
+  const reset=document.getElementById('resetPacking');
+  if(reset) reset.addEventListener('click',()=>{
+    if(!confirm('持ちものチェックを全部リセットしますか？')) return;
+    boxes.forEach(b=>{b.checked=false;localStorage.removeItem('taiwan2026_'+b.dataset.key);});
+    update();
+  });
+  update();
+})();
+</script>
 </body>
 </html>
